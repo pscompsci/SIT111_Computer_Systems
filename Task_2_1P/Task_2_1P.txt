@@ -1,0 +1,9 @@
+Task  2.1P – Implement and test the Mux in HDL
+
+Student ID:	219011171
+Name:		Peter Stacey
+
+Q1. Upload your HDL program (a .hdl file) to a shared repository (eg. Github) or a shared folder.
+
+https://github.com/pscompsci/SIT111_Computer_Systems/tree/main/Task_2_1P
+
