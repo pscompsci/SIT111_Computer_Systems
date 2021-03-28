@@ -1,0 +1,14 @@
+CHIP ALU {
+    IN x[16], y[16], zx, nx, zy, ny, f, no;
+    OUT out[16], zr, ng;
+
+    PARTS:
+        SelZero16(a=x, sel=zx, out=xInput);
+        SelNot16(a=xInput, sel=nx, out=xSelected);
+        SelZero16(a=y, sel=zy, out=yInput);
+        SelNot16(a=yInput, sel=ny, out=ySelected);
+        FAndAdd16(a=xSelected, b=ySelected, sel=f, out=fXY);
+        SelNot16(a=fXY, sel=no, out=out, out=result, out[15]=ng);
+        ALUOr16(a=result, out=or16Result);
+        Not(in=or16Result, out=zr);
+}

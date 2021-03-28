@@ -1,0 +1,8 @@
+CHIP SelZero16 {
+    IN a[16], sel;
+    OUT out[16];
+
+    PARTS:
+        Xor16(a=a, b=a, out=xorAA);
+        Mux16(a=a, b=xorAA, sel=sel, out=out);
+}

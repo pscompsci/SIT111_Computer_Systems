@@ -1,0 +1,8 @@
+CHIP SelNot16 {
+    IN a[16], sel;
+    OUT out[16];
+
+    PARTS:
+        Not16(in=a, out=notA);
+        Mux16(a=a, b=notA, sel=sel, out=out);
+}

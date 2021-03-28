@@ -1,0 +1,9 @@
+CHIP ALUOr4 {
+    IN a[4];
+    OUT out;
+
+    PARTS:
+        Or(a=a[0], b=a[1], out=orA);
+        Or(a=orA, b=a[2], out=orA2);
+        Or(a=orA2, b=a[3], out=out);
+}

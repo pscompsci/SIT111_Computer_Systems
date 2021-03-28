@@ -1,0 +1,8 @@
+Task  3.3D – Implement the ALU in HDL
+
+Student ID:	219011171
+Name:		Peter Stacey
+
+Q1. Upload your HDL program (a .hdl file) to a shared repository (eg. Github) or a shared folder.
+
+https://github.com/pscompsci/SIT111_Computer_Systems/blob/main/Task_3_3D/

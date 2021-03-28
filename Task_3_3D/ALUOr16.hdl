@@ -1,0 +1,9 @@
+CHIP ALUOr16 {
+    IN a[16];
+    OUT out;
+
+    PARTS:
+        ALUOr8(a=a[0..7], out=or16A);
+        ALUOr8(a=a[8..15], out=or16A2);
+        Or(a=or16A, b=or16A2, out=out);
+}
