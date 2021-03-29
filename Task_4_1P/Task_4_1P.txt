@@ -1,0 +1,8 @@
+Task  4.1P – Implement 16-bit register in HDL
+
+Student ID:	219011171
+Name:		Peter Stacey
+
+Q1. Upload your HDL program (a .hdl file) to a shared repository (eg. Github) or a shared folder.
+
+https://github.com/pscompsci/SIT111_Computer_Systems/blob/main/Task_4_1P/
