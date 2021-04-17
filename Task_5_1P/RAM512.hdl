@@ -1,0 +1,10 @@
+CHIP RAM512 {
+    IN in[16], load, address[9];
+    OUT out[16];
+
+    PARTS:
+    DMux(in = load, sel = address[8], a = a, b = b);
+    RAM256(in = in, load = a, address = address[0..7], out = out1);
+    RAM256(in = in, load = b, address = address[0..7], out = out2);
+    Mux16(a = out1, b = out2, sel = address[8], out = out);
+}
