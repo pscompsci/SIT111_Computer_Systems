@@ -3,8 +3,8 @@ CHIP RAM4K {
     OUT out[16];
 
     PARTS:
-    DMux(in = load, sel = address[11], a = a, b = b);
-    RAM2K(in = in, load = a, address = address[0..10], out = out1);
-    RAM2K(in = in, load = b, address = address[0..10], out = out2);
-    Mux16(a = out1, b = out2, sel = address[11], out = out);
+        DMux(in = load, sel = address[11], a = a, b = b);
+        RAM2K(in = in, load = a, address = address[0..10], out = out1);
+        RAM2K(in = in, load = b, address = address[0..10], out = out2);
+        Mux16(a = out1, b = out2, sel = address[11], out = out);
 }

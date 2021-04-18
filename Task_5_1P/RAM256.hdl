@@ -3,10 +3,10 @@ CHIP RAM256 {
     OUT out[16];
 
     PARTS:
-    DMux4Way(in = load, sel = address[6..7], a = a, b = b, c = c, d = d);
-    RAM64(in = in, load = a, address = address[0..5], out = out1);
-    RAM64(in = in, load = b, address = address[0..5], out = out2);
-    RAM64(in = in, load = c, address = address[0..5], out = out3);
-    RAM64(in = in, load = d, address = address[0..5], out = out4);
-    Mux4Way16(a = out1, b = out2, c = out3, d = out4, sel = address[6..7], out = out);
+        DMux4Way(in = load, sel = address[6..7], a = a, b = b, c = c, d = d);
+        RAM64(in = in, load = a, address = address[0..5], out = out1);
+        RAM64(in = in, load = b, address = address[0..5], out = out2);
+        RAM64(in = in, load = c, address = address[0..5], out = out3);
+        RAM64(in = in, load = d, address = address[0..5], out = out4);
+        Mux4Way16(a = out1, b = out2, c = out3, d = out4, sel = address[6..7], out = out);
 }
